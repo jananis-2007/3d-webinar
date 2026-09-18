@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Audit</title>
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    
+    body {
+      color: #333;
+      line-height: 1.6;
+      background-color: #f9f9fb;
+    }
+
+    /* Typography */
+    h1, h2, h3 { color: #111827; }
+    h1 { font-size: 3rem; margin-bottom: 1rem; line-height: 1.2; }
+    h2 { font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; }
+    p { margin-bottom: 1.5rem; font-size: 1.125rem; color: #4b5563; }
+
+    /* Layout & Containers */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Navbar */
+    nav {
+      background: #ffffff;
+      padding: 1.5rem 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+    }
+    .hero-btn {
+      display: inline-block;
+      background-color: #2563eb;
+      color: #ffffff;
+      padding: 1rem 2.5rem;
+      border-radius: 9999px;
+      font-size: 1.25rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+    }
+    .hero-btn:hover {
+      background-color: #1d4ed8;
+    }
+
+    /* Form Section */
+    .form-section {
+      padding: 5rem 0;
+      background-color: #ffffff;
+    }
+    .form-container {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e5e7eb;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #374151;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    .submit-btn {
+      width: 100%;
+      background-color: #111827;
+      color: #ffffff;
+      padding: 0.875rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.125rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .submit-btn:hover {
+      background-color: #374151;
+    }
+
+    /* Messages */
+    .message {
+      display: none;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .msg-success {
+      background-color: #d1fae5;
+      color: #065f46;
+    }
+    .msg-error {
+      background-color: #fee2e2;
+      color: #991b1b;
+    }
+
+    /* Footer */
+    footer {
+      background: #111827;
+      color: #f3f4f6;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 { font-size: 2.25rem; }
+      .hero { padding: 4rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-content">
+      <a href="#" class="logo">AuditPro</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Payment URL -->
+  <section class="hero">
+    <div class="container">
+      <h1>Unlock Your Website's Potential</h1>
+      <p>Identify growth bottlenecks and increase your conversions today. Get a comprehensive, expert-level analysis of your digital footprint.</p>
+      
+      <!-- Figma Button Requirement: Free audit for 1 rupee linked to Cashfree -->
+      <a href="https://payments.cashfree.com/forms/getaudit" target="_blank" class="hero-btn">
+        Get Free Audit for ₹1
+      </a>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="form-section">
+    <div class="container">
+      <h2>Request More Information</h2>
+      <div class="form-container">
+        <!-- Kept exactly 3 fields as requested: Name, Email, Phone -->
+        <form id="leadForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required>
+          </div>
+          <button type="submit" class="submit-btn" id="submitBtn">Save Details</button>
+        </form>
+
+        <div id="successMsg" class="message msg-success">Success! Your details have been saved.</div>
+        <div id="errorMsg" class="message msg-error">Something went wrong. Please try again.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 AuditPro. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Embedded JS Logic -->
+  <script>
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwZSQJ-mdOVOP1qJ0cRlgInvYZ2CJ-eviVE4YgFtASF9amO4R5Pt7ntv242jGKY8x6TtA/exec";
+    
+    const form = document.getElementById('leadForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const successMsg = document.getElementById('successMsg');
+    const errorMsg = document.getElementById('errorMsg');
+
+    function showSuccess() {
+      submitBtn.textContent = 'Save Details';
+      submitBtn.disabled = false;
+      successMsg.style.display = 'block';
+      errorMsg.style.display = 'none';
+      form.reset();
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        successMsg.style.display = 'none';
+      }, 5000);
+    }
+
+    function showError() {
+      submitBtn.textContent = 'Save Details';
+      submitBtn.disabled = false;
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'block';
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // UI state
+      submitBtn.textContent = 'Saving...';
+      submitBtn.disabled = true;
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+
+      // 1. Get values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+
+      // 2. Build URL exactly as requested
+      const url = SCRIPT_URL + "?" + new URLSearchParams({name, email, phone});
+
+      // 3. Call fetch using strict CRITICAL FETCH RULES
+      fetch(url, { 
+        method: "GET", 
+        mode: "no-cors" 
+      })
+      .then(() => showSuccess())
+      .catch(() => showError());
+    });
+  </script>
+</body>
+</html>
